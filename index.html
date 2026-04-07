@@ -10,37 +10,39 @@
 
 <body>
      
-    <header><h1 id="top">WELCOME TO <mark>TUTEDUDE</mark></h1></header>
+    <header><h1 id="top"><mark>WELCOME TO TUTEDUDE</mark></h1></header>
     
     <main>
         <article>
-             <img src="jj.jpeg" width="300" height="250">
-
             <ul>
-                 <li><a href="#About">About</a></li>
+                <li><a href="#About">About</a></li>
                 <li><a href="#Menu">Menu</a></li>
                 <li><a href="#Trivia">Trivia</a></li>
                 <li><a href="#Extras">Extras</a></li>
                 <li><a href="#Feedback">Feedback</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
+        <figure>
+            <img src="jj.jpeg" width="300" height="250">
+            <br><br>
+            <figurecaption><b>Our TuteDude's Logo</b></figurecaption>
+        </figure>    
+            
     </nav>
 <br>
 </main>
 
     <article ID="About">
         <h1>About Tutedude</h1>
-        <p><abbr title="TUTEDUDE">TD</abbr>  TuteDude is a fantastic way to practice 
-            and demonstrate proficiency in using HTML tags and structures.
-             This project will guide you through constructing a well-organised 
-             and semantic webpage that showcases a wide array of HTML capabilities. </p>
+        <p><abbr title="TUTEDUDE">TD</abbr>  Creating a comprehensive HTML webpage for a fictional learning platform like TuteDude is a fantastic way to practice and demonstrate proficiency in using HTML tags and structures.<br>
+            This project will guide you through constructing a well-organised and semantic webpage that showcases a wide array of HTML capabilities. </p>
     </article>
 
 
     <article ID="Menu">
-        <h1>                       Course's Available                 </h1>
-        
-        
+        <h1     class="ref">  
+            <span > Course's Available</span>   </h1>
         
         <table border="10">
             <thead>
@@ -175,9 +177,13 @@
             </tr>
             <tr>
                 <td>Guacamole</td>
-                <td>$1.50</td>
+                <td colspan="4">$1.50</td>
             </tr>
-            
+            <tfooter>
+                <tr>
+                    <td colspan="6">All prices are in USD</td>
+                </tr>
+            </tfooter>
         </table>
         <a href="#top">Back to the top</a>
         <p> <b>Average meal price rate : $2.00 - $6.50</b></p>
@@ -185,14 +191,23 @@
     
     
     <article ID="Trivia">
-        <h1>Trivia</h1>
-        <p>
-            <ol>
-                <li>Tutedude was founded in 2020.</li>
-                <li>Over 100,000 students have enrolled in Tutedude courses.</li>
-                <li>Tutedude offers a variety of courses in tech and business.</li>
-            </ol>
-        </p>      
+        
+        <aside>
+            <H2>TRIVA</H2>
+             <details>
+                <summary><b>Did You Know ?</b></summary>
+                <p>TuteDude was founded in 2021 by a group of passionate educators and food enthusiasts who wanted to create a unique learning experience that combined education with delicious food.</p>
+                </details>
+                <details>
+                <summary><b>Fun Fact</b></summary>
+                <p>TuteDude's signature dish, the "Crunchy Veggie Taco," was inspired by a popular street food in Mexico and has become a fan favorite among customers.</p> 
+                </details>
+                <details>
+                <summary><b>Trivia</b></summary>
+                <p>TuteDude's menu is designed to cater to a wide range of dietary preferences, including vegetarian, vegan, and gluten-free options, ensuring that everyone can enjoy a delicious meal while learning.</p>
+                </details>
+        </aside>
+               
     </article>
     
     
@@ -210,19 +225,35 @@
     <h1><b>Give Us Feedback :</b></h1>
         <form>
             <fieldset>
-                <legend>Feedback:</legend>
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" required><br><br>
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" required><br><br>
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address"><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="feedback">Textarea:</label><br>
-                <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
-                <input type="submit" value="Submit">
+                <legend>Your Info :</legend>
+                <label for="name">Name :</label>
+                <input type="text" id="name" required>
+                <br><br>
+                <label for="mail">Email :</label>
+                <input type="email" id="mail" required>
+                <br><br>
+                <label for="fav">Favorite Item :</label>
+                <select id = 'fav'>
+                    <option value="Crunchy Beef">Crunchy Beef</option>
+                    <option value="Crunchy Chicken">Crunchy Chicken</option>
+                    <option value="Crunchy Veggie">Crunchy Veggie</option>
+                    <option value="Soft Beer">Soft Beer</option>
+                    <option value="Soft Veggie">Soft Veggie</option>
+                    <option value="Combo Meal">Combo Meal</option>
+                    <option value="Chips & Salad">Chips & Salad</option>
+                    <option value="Guacamole">Guacamole</option>
+                </select>
             </fieldset>
+                <br>
+                <fieldset>Your Message:
+                <legend id="message">Message :</legend>
+                <br>
+                <textarea id="message" rows="5" columns="30" placeholder="Write your message" required>
+                </textarea>
+
+                </fieldset>   
+                <br>
+                <input type="Submit">
     </form>
     </article>
     
